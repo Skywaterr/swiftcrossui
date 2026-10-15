@@ -16,7 +16,7 @@ struct ContentView: View {
             }        
             .padding()
             .frame(minWidth: proxy.size.width, minHeight: proxy.size.height)
-            .background(Color.yellow)
+            .background(Color.teal)
         }
         
     }
