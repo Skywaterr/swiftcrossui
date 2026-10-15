@@ -1,5 +1,6 @@
-import SwiftCrossUI
-import WinUIBackend
+import SwiftCrossUI         // Depending on which env we're developing in, you should import the right backend
+//import WinUIBackend       // Windows
+import AppKitBackend        // MacOS
 
 struct ContentView: View {
     var body: some View {
