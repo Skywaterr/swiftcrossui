@@ -16,8 +16,8 @@ let package = Package(
             name: "HelloWorld",
             dependencies: [
                 .product(name: "SwiftCrossUI", package: "swift-cross-ui"),
-                .product(name: "AppKitBackend", package: "swift-cross-ui"),
-                //.product(name: "WinUIBackend", package: "swift-cross-ui"),
+                //.product(name: "AppKitBackend", package: "swift-cross-ui"),
+                .product(name: "WinUIBackend", package: "swift-cross-ui"),
             ]
         ),
     ]

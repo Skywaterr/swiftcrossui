@@ -32,6 +32,14 @@ in Package.swift and ContentView.swift, and comment out AppKitBackend in both pl
 Run "swift-bundler run" in the same directory as Package.swift in order to build the app.
 It will take far longer than on a Mac system because of compilation with MSVC (Windows)
 tools. Once it's done building, it may call mt on your system and other commands. Even 
-if they fail, the build will be successful..
+if they fail, the build will be successful.
 
-The executable will be in .build/debug, which you can run.
+The executable will be in .build/debug, which you can run. Once again, you will need
+to hit Ctrl-C in your terminal to fully close the executable.
+
+
+#swift-bundler
+Swift-bundler automates packaging Swift applications for cross-platform use, and it 
+is not surprising that SwiftCrossUI decides to use it for compilation. When running
+"swift-bundler run" in your terminal, it relies on the existence of the Bundler.toml
+file in the same directory to build.
