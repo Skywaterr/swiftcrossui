@@ -1,6 +1,9 @@
 import SwiftCrossUI         // Depending on which env we're developing in, you should import the right backend
-import WinUIBackend       // Windows
-//import AppKitBackend        // MacOS
+import WinUIBackend         // Windows
+//import AppKitBackend      // MacOS
+
+// I think the next thing I'm doing is to write a button
+// that affects the positioning of itself or another widget
 
 struct ContentView: View {
     var body: some View {
@@ -15,19 +18,19 @@ struct ContentView: View {
                 Text(width < 300 ? "Small Window" : "Big Window")
             }        
             .padding()
-            .frame(minWidth: proxy.size.width, minHeight: proxy.size.height)
+            .frame(minWidth: proxy.size.width / 2, minHeight: proxy.size.height)
             .background(Color.teal)
         }
         
     }
 }
 
-@main
-struct MyApp: App {
-    var body: some Scene {
-        WindowGroup("ContentViewer") {
-            ContentView()
+struct SplitView: View {
+    var body: some View {
+        NavigationSplitView {
+            Text("Primary")
+        } detail: {
+            Text("Secondary")
         }
-        .defaultSize(width: 400, height: 300)
     }
 }
